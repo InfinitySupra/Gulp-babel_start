@@ -6,7 +6,6 @@ import uglify from 'gulp-uglify-es';
 import concat from 'gulp-concat';
 import autoprefixer from 'gulp-autoprefixer';
 import pugHtml from './gulp/tasks/pug';
-import lessStyle from './gulp/tasks/less';
 const sass = require('gulp-sass')(require('sass'));
 
 
@@ -74,7 +73,6 @@ export const build = () => {
 export const watching = () => {
    gulp.watch(['app/pug/**/*.pug'], pugHtml);
    gulp.watch(['app/scss/**/*.scss'], buildStyles);
-  // gulp.watch(['app/less/**/*.less'], lessStyle);
    gulp.watch(['app/script/**/*.js', '!app/script/**/main.min.js'], scripts);
    gulp.watch(['app/*.html']).on('change', browserSync.reload);
 };
@@ -82,7 +80,6 @@ export const watching = () => {
 export default gulp.parallel(
    pugHtml,
    buildStyles,
-  // lessStyle,
    scripts, 
    browsersync, 
    watching

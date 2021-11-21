@@ -1,9 +1,9 @@
-// the test config
+@import "global";
+@import "fonts";
+@import "var";
 
-/* body {
-   padding-top: 50px;
-   background: url(../assets/images/test.jpg) center no-repeat;
-   background-size: cover;
-   width: 600px;
-   height: 520px;
-} */
+*, 
+*::after, 
+*::before {
+   box-sizing: border-box;
+}

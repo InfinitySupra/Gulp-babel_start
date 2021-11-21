@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "gulp",
-    "build:dev": "gulp buildDist"
+    "build": "gulp buildDist"
   },
   "devDependencies": {
     "@babel/core": "^7.16.0",
@@ -20,7 +20,7 @@
     "gulp-babel": "^8.0.0",
     "gulp-concat": "^2.6.1",
     "gulp-imagemin": "^7.1.0",
-    "gulp-less": "^5.0.0",
+    "gulp-plumber": "^1.2.1",
     "gulp-pug": "^5.0.0",
     "gulp-sass": "^5.0.0",
     "gulp-uglify": "^3.0.2",

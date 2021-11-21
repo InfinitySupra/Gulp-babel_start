@@ -1,15 +1,16 @@
 import gulp from 'gulp';
-import concat from 'gulp-concat';
 import pug from 'gulp-pug';
+import plumber from 'gulp-plumber';
 
 const pugHtml = () => {
-   return gulp.src('./app/pug/layout.pug')
+   return gulp.src('./app/pug/index.pug')
+      .pipe(plumber())
       .pipe(
          pug({
-            // Your options in here.
+            pretty: true
          })
       )
-      .pipe(concat('index.html'))
+      .pipe(plumber.stop())
       .pipe(gulp.dest('app'));
 };
 
